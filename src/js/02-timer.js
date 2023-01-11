@@ -18,6 +18,7 @@ const options = {
     } else {
       startBtnHandler.removeAttribute('disabled');
       startBtnHandler.addEventListener('click', () => {
+        startBtnHandler.toggleAttribute('disabled');
         const intevalId = setInterval(() => {
           const remainder = selectedDates[0].getTime() - Date.now();
           const converted = convertMs(remainder);
