@@ -55,6 +55,8 @@ function convertMs(ms) {
 function addLeadingZero(number) {
   if (number < 10) {
     return `0${number}`;
+  } else {
+    return number;
   }
 }
 flatpickr('#datetime-picker', options);
