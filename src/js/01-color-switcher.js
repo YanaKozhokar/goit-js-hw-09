@@ -5,6 +5,7 @@ let intervalId;
 
 startBtnHandle.addEventListener('click', () => {
   startBtnHandle.toggleAttribute('disabled');
+  stopBtnHandle.toggleAttribute('disabled');
   intervalId = setInterval(() => {
     bodyRef.style.backgroundColor = getRandomHexColor();
   }, 1000);
@@ -13,6 +14,7 @@ startBtnHandle.addEventListener('click', () => {
 stopBtnHandle.addEventListener('click', () => {
   clearInterval(intervalId);
   startBtnHandle.toggleAttribute('disabled');
+  stopBtnHandle.toggleAttribute('disabled');
 });
 
 function getRandomHexColor() {
